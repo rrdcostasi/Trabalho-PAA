@@ -85,33 +85,33 @@ public class Impressoes {
         imprimirOperacoes(seqA,seqB,dist.operacoes);
     }
 
-    public void comparacoesLev(String seqA,String seqB, Resultado dist, long tempo,String tipo){
+    public void comparacoesLev(String seqA,String seqB, Resultado dist, double tempo,String tipo){
         if(!Objects.equals(tipo, "volumetria")){
             System.out.println("Comparando \"" + seqA + "\" e \"" + seqB + "\":");
             System.out.println("Levenshtein:");
             imprimirMatOpLev(dist,seqA,seqB);
-            System.out.println("  Tempo: " + tempo + " ns");
+            System.out.println("  Tempo: " + tempo + " ms");
         }
         else{
             System.out.println("Comparando string de "+seqA.length()+" caracteres");
             System.out.println("Levenshtein:");
             System.out.println("  Distância: " + dist.distancia);
-            System.out.println("  Tempo: " + tempo + " ns");
+            System.out.println("  Tempo: " + tempo + " ms");
         }
 
     }
 
-    public void comparacoesDam( String seqA,String seqB, Resultado dist, long tempo,String tipo){
+    public void comparacoesDam( String seqA,String seqB, Resultado dist, double tempo,String tipo){
         if(!Objects.equals(tipo, "volumetria")){
             System.out.println("\nDamerau-Levenshtein:");
             imprimirMatOpDistEd(dist,seqA,seqB);
-            System.out.println("  Tempo: " + tempo + " ns");
+            System.out.println("  Tempo: " + tempo + " ms");
             System.out.println("_____________________________________________________________");
         }
         else{
             System.out.println("\nDamerau-Levenshtein:");
             System.out.println("  Distância: " + dist.distancia);
-            System.out.println("  Tempo: " + tempo + " ns");
+            System.out.println("  Tempo: " + tempo + " ms");
             System.out.println("_____________________________________________________________");
         }
     }

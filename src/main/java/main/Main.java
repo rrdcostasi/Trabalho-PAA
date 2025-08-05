@@ -42,12 +42,12 @@ public class Main {
         long inicioLev = System.nanoTime();
         Resultado resultadoLev = lev.calcularDistancia(seqA, seqB);
         long fimLev = System.nanoTime();
-        long tempoLev = fimLev - inicioLev;
+        double tempoLev = (fimLev - inicioLev)/1000000.0;
 
         long inicioDam = System.nanoTime();
         Resultado resultadoDam = damerau.calcularDistancia(seqA, seqB);
         long fimDam = System.nanoTime();
-        long tempoDam = fimDam - inicioDam;
+        double tempoDam = (fimDam - inicioDam)/1000000.0;
 
         impressoes.comparacoesLev(seqA,seqB,resultadoLev,tempoLev,tipo);
         impressoes.comparacoesDam(seqA,seqB,resultadoDam,tempoDam,tipo);
