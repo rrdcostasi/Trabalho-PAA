@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class Impressoes {
-    public void imprimirMatriz(int[][] matriz, String a, String b) {
+    private void imprimirMatriz(int[][] matriz, String a, String b) {
         System.out.print("  λ  ");
         for (int j = 0; j < b.length(); j++) {
             System.out.print(b.charAt(j) + "  ");
@@ -26,7 +26,7 @@ public class Impressoes {
         }
     }
 
-    public void imprimirOperacoes(String a, String b, String[][] operacoes) {
+    private void imprimirOperacoes(String a, String b, String[][] operacoes) {
         int i = operacoes.length - 1;
         int j = operacoes[0].length - 1;
 
