@@ -10,6 +10,7 @@ public class Main {
         //Conjuntos de strings para os testes
         String[] exemplosBasicos = {
                 "gasto", "gata",
+                "teste","teste",
                 "consolacao","sola",
                 "ca","ac",
                 "abxcdyezf","axbcdyzef"
@@ -18,8 +19,11 @@ public class Main {
         //Conjuntos de strings baseados na volumetria de caracteres
         String[] exemplosVolumetria = {
                 geraDados.gerarString(10),geraDados.gerarString(10),
+                geraDados.gerarString(50),geraDados.gerarString(50),
                 geraDados.gerarString(100),geraDados.gerarString(100),
+                geraDados.gerarString(500),geraDados.gerarString(500),
                 geraDados.gerarString(1000),geraDados.gerarString(1000),
+                geraDados.gerarString(5000),geraDados.gerarString(5000),
                 geraDados.gerarString(10000),geraDados.gerarString(10000),
                 geraDados.gerarString(11000),geraDados.gerarString(11000)
         };
