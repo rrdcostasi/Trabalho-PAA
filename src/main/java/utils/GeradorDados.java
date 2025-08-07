@@ -5,7 +5,7 @@ import java.util.Random;
 public class GeradorDados {
     //Gera as strings usadas nos testes de volumetria
     public String gerarString(int tamanho) {
-        String alfabeto = "abcd"; // ou outro que desejar
+        String alfabeto = "abcd"; //Letras que constituirão as strings
         String palavra;
         StringBuilder sb = new StringBuilder();
         Random randomico = new Random();

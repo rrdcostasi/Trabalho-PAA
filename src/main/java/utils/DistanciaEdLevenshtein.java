@@ -5,11 +5,8 @@ public class DistanciaEdLevenshtein {
     //Algoritmo Levenshtein
     public Resultado calcularDistancia(String a, String b) {
         Resultado resultado = new Resultado();
-        Impressoes impressoes = new Impressoes();
         int tamanhoA = a.length();
         int tamanhoB = b.length();
-
-
         int[][] matrizEdicao = new int[tamanhoA + 1][tamanhoB + 1];
         String[][] operacoes = new String[tamanhoA + 1][tamanhoB + 1];
 
@@ -45,14 +42,14 @@ public class DistanciaEdLevenshtein {
                     operacaoEscolhida = "deleção";
                 }
 
-                // Só agora atualiza a célula da matriz
+                // Atualiza a célula da matriz
                 matrizEdicao[i][j] = menorCusto;
                 operacoes[i][j] = operacaoEscolhida;
             }
         }
 
         resultado.matrizEd = matrizEdicao;
-        resultado.distancia = matrizEdicao[tamanhoA][tamanhoB];
+        resultado.distancia = matrizEdicao[tamanhoA][tamanhoB]; //última celula da matriz
         resultado.operacoes = operacoes;
 
         return resultado;

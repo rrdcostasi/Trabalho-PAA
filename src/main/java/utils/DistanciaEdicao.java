@@ -2,10 +2,9 @@ package utils;
 
 public class DistanciaEdicao {
 
-    //Algoritmo de Damerau-Levenshtein -> usado no artigo porem sem quebra e fusao
+    //Algoritmo de Damerau-Levenshtein -> usado no artigo porém sem quebra e fusao
     public Resultado calcularDistancia(String a, String b) {
         Resultado resultado = new Resultado();
-        Impressoes impressoes = new Impressoes();
         int tamanhoA = a.length();
         int tamanhoB = b.length();
         int[][] matrizEdicao = new int[tamanhoA + 1][tamanhoB + 1];
@@ -54,14 +53,14 @@ public class DistanciaEdicao {
                     operacaoEscolhida = "transposição";
                 }
 
-                // Só agora atualiza a célula da matriz
+                // Atualiza a célula da matriz
                 matrizEdicao[i][j] = menorCusto;
                 operacoes[i][j] = operacaoEscolhida;
             }
         }
 
         resultado.matrizEd = matrizEdicao;
-        resultado.distancia = matrizEdicao[tamanhoA][tamanhoB];
+        resultado.distancia = matrizEdicao[tamanhoA][tamanhoB]; //última célula da matriz
         resultado.operacoes = operacoes;
 
         return resultado;
