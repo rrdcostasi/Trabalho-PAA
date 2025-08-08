@@ -6,6 +6,9 @@ public class Main {
 
     public static void main(String[] args) {
         GeradorDados geraDados = new GeradorDados();
+        int[] tamanhos = {10, 50, 100, 500, 1000, 5000, 10000, 11000};
+        String[] exemplosVolumetria = new String[tamanhos.length * 2];
+        String[] exemplosVolTransp = new String[tamanhos.length * 2];
 
         //Conjuntos de strings para os testes
         String[] exemplosBasicos = {
@@ -17,23 +20,28 @@ public class Main {
         };
 
         //Conjuntos de strings baseados na volumetria de caracteres
-        String[] exemplosVolumetria = {
-                geraDados.gerarString(10),geraDados.gerarString(10),
-                geraDados.gerarString(50),geraDados.gerarString(50),
-                geraDados.gerarString(100),geraDados.gerarString(100),
-                geraDados.gerarString(500),geraDados.gerarString(500),
-                geraDados.gerarString(1000),geraDados.gerarString(1000),
-                geraDados.gerarString(5000),geraDados.gerarString(5000),
-                geraDados.gerarString(10000),geraDados.gerarString(10000),
-                geraDados.gerarString(11000),geraDados.gerarString(11000)
-        };
+        int index = 0;
+        for (int tamanho : tamanhos) {
+            exemplosVolumetria[index] = geraDados.gerarString(tamanho);
+            exemplosVolumetria[index+1] = geraDados.gerarString(tamanho);
+            String[] par = geraDados.transp(tamanho);
+            exemplosVolTransp[index] = par[0];
+            exemplosVolTransp[index+1] = par[1];
+            index+=2;
+        }
 
         for (int i = 0; i < exemplosBasicos.length; i+=2) {
             compararAlgoritmos(exemplosBasicos[i], exemplosBasicos[i+1], "basico");
         }
 
+        System.out.printf("\nVOLUMETRIA:\n");
         for (int i = 0; i < exemplosVolumetria.length; i+=2) {
             compararAlgoritmos(exemplosVolumetria[i], exemplosVolumetria[i+1],"volumetria");
+        }
+
+        System.out.printf("\nVOLUMETRIA TRANSPOSIÇÃO:\n");
+        for (int i = 0; i < exemplosVolTransp.length; i+=2) {
+            compararAlgoritmos(exemplosVolTransp[i], exemplosVolTransp[i+1],"volumetria");
         }
     }
 
