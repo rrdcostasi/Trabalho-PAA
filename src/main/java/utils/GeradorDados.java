@@ -26,7 +26,7 @@ public class GeradorDados {
         return sb.toString();
     }
 
-    public String geraTransp (String a){
+    private String geraTransp (String a){
         int tamanho=a.length();
         char[] letras = a.toCharArray();
 

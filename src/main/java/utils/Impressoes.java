@@ -54,7 +54,7 @@ public class Impressoes {
     }
 
     // Imprime as operações para matriz deslocada (Damerau)
-    private void imprimirOperacoes(String a, String b, String[][] operacoes) {
+    private void imprimirOperacoesDam(String a, String b, String[][] operacoes) {
         int i = a.length() + 1;
         int j = b.length() + 1;
 
@@ -99,7 +99,7 @@ public class Impressoes {
     }
 
     // Imprime as operações para matriz normal (Levenshtein)
-    private void imprimirOperacoesNormal(String a, String b, String[][] operacoes) {
+    private void imprimirOperacoesLev(String a, String b, String[][] operacoes) {
         int i = a.length();
         int j = b.length();
 
@@ -144,7 +144,7 @@ public class Impressoes {
         imprimirMatriz(dist.matrizEd, seqA, seqB);
         System.out.println("\nDistância: " + dist.distancia);
         System.out.println("\nOperações necessárias: ");
-        imprimirOperacoesNormal(seqA, seqB, dist.operacoes);
+        imprimirOperacoesLev(seqA, seqB, dist.operacoes);
     }
 
     // Imprime matriz e operações Damerau-Levenshtein
@@ -153,7 +153,7 @@ public class Impressoes {
         imprimirMatrizDamerau(dist.matrizEd, seqA, seqB);
         System.out.println("\nDistância: " + dist.distancia);
         System.out.println("\nOperações necessárias: ");
-        imprimirOperacoes(seqA, seqB, dist.operacoes);
+        imprimirOperacoesDam(seqA, seqB, dist.operacoes);
     }
 
     // Comparações simplificadas
