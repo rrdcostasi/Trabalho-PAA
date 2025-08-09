@@ -1,0 +1,353 @@
+"C:\Program Files\Java\jdk-11.0.9\bin\java.exe" "-javaagent:E:\Programação\JetBrains\IntelliJ IDEA Community Edition 2024.3.4.1\lib\idea_rt.jar=57117" -Dfile.encoding=UTF-8 -classpath "D:\MESTRADO\DISCIPLINAS\PROJETO E ANÁLISE DE ALGORITMOS\TRABALHO FINAL\Trabalho_Final_PAA\target\classes" main.Main
+Comparando "gasto" e "gata":
+Levenshtein:
+Matriz - Levenshtein:
+
+   λ  g  a  t  a 
+λ  0  1  2  3  4 
+g  1  0  1  2  3 
+a  2  1  0  1  2 
+s  3  2  1  1  2 
+t  4  3  2  1  2 
+o  5  4  3  2  2 
+
+Distância: 2
+
+Operações necessárias: 
+- Remover 's'
+- Substituir 'o' por 'a'
+  Tempo: 0.303601 ms
+
+Damerau-Levenshtein:
+Matriz - Damerau:
+
+   λ  g  a  t  a 
+λ  0  1  2  3  4 
+g  1  0  1  2  3 
+a  2  1  0  1  2 
+s  3  2  1  1  2 
+t  4  3  2  1  2 
+o  5  4  3  2  2 
+
+Distância: 2
+
+Operações necessárias: 
+- Remover 's'
+- Substituir 'o' por 'a'
+  Tempo: 0.2144 ms
+_____________________________________________________________
+Comparando "teste" e "teste":
+Levenshtein:
+Matriz - Levenshtein:
+
+   λ  t  e  s  t  e 
+λ  0  1  2  3  4  5 
+t  1  0  1  2  3  4 
+e  2  1  0  1  2  3 
+s  3  2  1  0  1  2 
+t  4  3  2  1  0  1 
+e  5  4  3  2  1  0 
+
+Distância: 0
+
+Operações necessárias: 
+  Tempo: 0.0113 ms
+
+Damerau-Levenshtein:
+Matriz - Damerau:
+
+   λ  t  e  s  t  e 
+λ  0  1  2  3  4  5 
+t  1  0  1  2  3  4 
+e  2  1  0  1  2  3 
+s  3  2  1  0  1  2 
+t  4  3  2  1  0  1 
+e  5  4  3  2  1  0 
+
+Distância: 0
+
+Operações necessárias: 
+  Tempo: 0.0237 ms
+_____________________________________________________________
+Comparando "consolacao" e "sola":
+Levenshtein:
+Matriz - Levenshtein:
+
+   λ  s  o  l  a 
+λ  0  1  2  3  4 
+c  1  1  2  3  4 
+o  2  2  1  2  3 
+n  3  3  2  2  3 
+s  4  3  3  3  3 
+o  5  4  3  4  4 
+l  6  5  4  3  4 
+a  7  6  5  4  3 
+c  8  7  6  5  4 
+a  9  8  7  6  5 
+o 10  9  8  7  6 
+
+Distância: 6
+
+Operações necessárias: 
+- Remover 'c'
+- Remover 'o'
+- Remover 'n'
+- Remover 'a'
+- Remover 'c'
+- Remover 'o'
+  Tempo: 0.0165 ms
+
+Damerau-Levenshtein:
+Matriz - Damerau:
+
+   λ  s  o  l  a 
+λ  0  1  2  3  4 
+c  1  1  2  3  4 
+o  2  2  1  2  3 
+n  3  3  2  2  3 
+s  4  3  3  3  3 
+o  5  4  3  4  4 
+l  6  5  4  3  4 
+a  7  6  5  4  3 
+c  8  7  6  5  4 
+a  9  8  7  6  5 
+o 10  9  8  7  6 
+
+Distância: 6
+
+Operações necessárias: 
+- Remover 'c'
+- Remover 'o'
+- Remover 'n'
+- Remover 'a'
+- Remover 'c'
+- Remover 'o'
+  Tempo: 0.035799 ms
+_____________________________________________________________
+Comparando "ca" e "ac":
+Levenshtein:
+Matriz - Levenshtein:
+
+   λ  a  c 
+λ  0  1  2 
+c  1  1  1 
+a  2  1  2 
+
+Distância: 2
+
+Operações necessárias: 
+- Substituir 'c' por 'a'
+- Substituir 'a' por 'c'
+  Tempo: 0.007 ms
+
+Damerau-Levenshtein:
+Matriz - Damerau:
+
+   λ  a  c 
+λ  0  1  2 
+c  1  1  1 
+a  2  1  1 
+
+Distância: 1
+
+Operações necessárias: 
+- Trocar 'c' com 'a'
+  Tempo: 0.018901 ms
+_____________________________________________________________
+Comparando "abxcdyezf" e "axbcdyzef":
+Levenshtein:
+Matriz - Levenshtein:
+
+   λ  a  x  b  c  d  y  z  e  f 
+λ  0  1  2  3  4  5  6  7  8  9 
+a  1  0  1  2  3  4  5  6  7  8 
+b  2  1  1  1  2  3  4  5  6  7 
+x  3  2  1  2  2  3  4  5  6  7 
+c  4  3  2  2  2  3  4  5  6  7 
+d  5  4  3  3  3  2  3  4  5  6 
+y  6  5  4  4  4  3  2  3  4  5 
+e  7  6  5  5  5  4  3  3  3  4 
+z  8  7  6  6  6  5  4  3  4  4 
+f  9  8  7  7  7  6  5  4  4  4 
+
+Distância: 4
+
+Operações necessárias: 
+- Substituir 'b' por 'x'
+- Substituir 'x' por 'b'
+- Substituir 'e' por 'z'
+- Substituir 'z' por 'e'
+  Tempo: 0.031799 ms
+
+Damerau-Levenshtein:
+Matriz - Damerau:
+
+   λ  a  x  b  c  d  y  z  e  f 
+λ  0  1  2  3  4  5  6  7  8  9 
+a  1  0  1  2  3  4  5  6  7  8 
+b  2  1  1  1  2  3  4  5  6  7 
+x  3  2  1  1  2  3  4  5  6  7 
+c  4  3  2  2  1  2  3  4  5  6 
+d  5  4  3  3  2  1  2  3  4  5 
+y  6  5  4  4  3  2  1  2  3  4 
+e  7  6  5  5  4  3  2  2  2  3 
+z  8  7  6  6  5  4  3  2  2  3 
+f  9  8  7  7  6  5  4  3  3  2 
+
+Distância: 2
+
+Operações necessárias: 
+- Trocar 'b' com 'x'
+- Trocar 'e' com 'z'
+  Tempo: 0.055401 ms
+_____________________________________________________________
+
+VOLUMETRIA:
+Comparando string de 10 caracteres
+Levenshtein:
+  Distância: 4
+  Tempo: 0.0384 ms
+
+Damerau-Levenshtein:
+  Distância: 4
+  Tempo: 0.0761 ms
+_____________________________________________________________
+Comparando string de 50 caracteres
+Levenshtein:
+  Distância: 26
+  Tempo: 0.6253 ms
+
+Damerau-Levenshtein:
+  Distância: 26
+  Tempo: 1.2278 ms
+_____________________________________________________________
+Comparando string de 100 caracteres
+Levenshtein:
+  Distância: 45
+  Tempo: 2.6027 ms
+
+Damerau-Levenshtein:
+  Distância: 44
+  Tempo: 3.935499 ms
+_____________________________________________________________
+Comparando string de 500 caracteres
+Levenshtein:
+  Distância: 216
+  Tempo: 23.5664 ms
+
+Damerau-Levenshtein:
+  Distância: 209
+  Tempo: 36.526901 ms
+_____________________________________________________________
+Comparando string de 1000 caracteres
+Levenshtein:
+  Distância: 435
+  Tempo: 23.2964 ms
+
+Damerau-Levenshtein:
+  Distância: 425
+  Tempo: 33.3895 ms
+_____________________________________________________________
+Comparando string de 5000 caracteres
+Levenshtein:
+  Distância: 2137
+  Tempo: 424.3017 ms
+
+Damerau-Levenshtein:
+  Distância: 2075
+  Tempo: 620.6664 ms
+_____________________________________________________________
+Comparando string de 10000 caracteres
+Levenshtein:
+  Distância: 4269
+  Tempo: 1473.2981 ms
+
+Damerau-Levenshtein:
+  Distância: 4163
+  Tempo: 2028.254899 ms
+_____________________________________________________________
+Comparando string de 11000 caracteres
+Levenshtein:
+  Distância: 4717
+  Tempo: 1659.077 ms
+
+Damerau-Levenshtein:
+  Distância: 4585
+  Tempo: 2383.7609 ms
+_____________________________________________________________
+
+VOLUMETRIA TRANSPOSIÇÃO:
+Comparando string de 10 caracteres
+Levenshtein:
+  Distância: 6
+  Tempo: 0.0056 ms
+
+Damerau-Levenshtein:
+  Distância: 3
+  Tempo: 0.0061 ms
+_____________________________________________________________
+Comparando string de 50 caracteres
+Levenshtein:
+  Distância: 27
+  Tempo: 0.0351 ms
+
+Damerau-Levenshtein:
+  Distância: 17
+  Tempo: 0.0517 ms
+_____________________________________________________________
+Comparando string de 100 caracteres
+Levenshtein:
+  Distância: 45
+  Tempo: 0.1202 ms
+
+Damerau-Levenshtein:
+  Distância: 33
+  Tempo: 0.179099 ms
+_____________________________________________________________
+Comparando string de 500 caracteres
+Levenshtein:
+  Distância: 242
+  Tempo: 2.739101 ms
+
+Damerau-Levenshtein:
+  Distância: 167
+  Tempo: 4.179299 ms
+_____________________________________________________________
+Comparando string de 1000 caracteres
+Levenshtein:
+  Distância: 476
+  Tempo: 10.875601 ms
+
+Damerau-Levenshtein:
+  Distância: 333
+  Tempo: 17.051501 ms
+_____________________________________________________________
+Comparando string de 5000 caracteres
+Levenshtein:
+  Distância: 2387
+  Tempo: 512.151201 ms
+
+Damerau-Levenshtein:
+  Distância: 1667
+  Tempo: 556.899001 ms
+_____________________________________________________________
+Comparando string de 10000 caracteres
+Levenshtein:
+  Distância: 4744
+  Tempo: 1485.526199 ms
+
+Damerau-Levenshtein:
+  Distância: 3333
+  Tempo: 2151.6334 ms
+_____________________________________________________________
+Comparando string de 11000 caracteres
+Levenshtein:
+  Distância: 5246
+  Tempo: 1592.989399 ms
+
+Damerau-Levenshtein:
+  Distância: 3667
+  Tempo: 2432.8377 ms
+_____________________________________________________________
+
+Process finished with exit code 0
